@@ -1,0 +1,8 @@
+<h1>Show Project</h1>
+
+  <h2>Title: <%= @project.title %></h2>
+
+<%= for story <- @stories do %>
+<p><%= story.title %></p>
+<% end %>
+<span><%= live_redirect "Back", to: Routes.project_index_path(@socket, :index) %></span>
